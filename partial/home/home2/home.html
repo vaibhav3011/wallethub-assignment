@@ -1,0 +1,63 @@
+<div ng-controller="HomeCtrl2">
+    <section class="bg-grey-lighter home__title">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer" ui-sref="home({pageParam : 1})">
+                    Page 1
+                </div>
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer active" ui-sref="home({pageParam : 2})">
+                    Page 2
+                </div>
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer" ui-sref="home({pageParam : 3})">
+                    Page 3
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-top-40">
+        <div class="container">
+            <div class="row padding-top-20">
+                <div class="col-12 text-center f-20 padding-8">Point 2: Hello, <strong>{{userName}}</strong> from Page 1</div>
+            </div>
+
+            <!--Point 7 : Sum of three input fields, with answer editable-->
+            <div class="row padding-top-20">
+                <div class="col-3 f-20 padding-8"></div>
+                <div class="col-2 text-center">A</div>
+                <div class="col-2 text-center">B</div>
+                <div class="col-2 text-center">C</div>
+                <div class="col-2 text-center">A+B+C</div>
+            </div>
+            <div class="row padding-top-10">
+                <div class="col-3 f-20 padding-8">Point 7: Sum Task</div>
+                <div class="col-2">
+                    <input class="padding-12" type="number" ng-model="number[0]" ng-change="change_numbers()"/>
+                </div>
+                <div class="col-2">
+                    <input class="padding-12" type="number" ng-model="number[1]" ng-change="change_numbers()"/>
+                </div>
+                <div class="col-2">
+                    <input class="padding-12" type="number" ng-model="number[2]" ng-change="change_numbers()"/>
+                </div>
+                <div class="col-2">
+                    <input class="padding-12" type="number" ng-model="number_sum" ng-change="change_sum()"/>
+                </div>
+            </div>
+
+            <!--Point 8 : # inputs, entering 5th char, move focus to next input-->
+            <div class="row padding-top-20">
+                <div class="col-3 f-20 padding-8">Point 8: Move focus of input</div>
+                <div class="col-2">
+                    <input class="padding-12" type="text" id="input-1" focus/>
+                </div>
+                <div class="col-2">
+                    <input class="padding-12" type="text" id="input-2" focus/>
+                </div>
+                <div class="col-2">
+                    <input class="padding-12" type="text" id="input-3" focus/>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

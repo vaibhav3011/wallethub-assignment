@@ -1,0 +1,44 @@
+<div ng-controller="HomeCtrl1">
+
+    <section class="bg-grey-lighter home__title">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer active" ui-sref="home({pageParam : 1})">
+                    Page 1
+                </div>
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer" ui-sref="home({pageParam : 2})">
+                    Page 2
+                </div>
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer" ui-sref="home({pageParam : 3})">
+                    Page 3
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-top-40">
+        <div class="container">
+            <div class="row padding-top-20">
+                <div class="col-3 f-20 padding-8">Point 2: Enter your name : </div>
+                <div class="col-4">
+                    <input class="padding-12" ng-model="userName" type="text" placeholder="Your name"/>
+                </div>
+                <div class="col-3 btn btn__mod" ng-click="save_name()">Save name</div>
+            </div>
+
+            <div class="row padding-top-20">
+                <div class="col-3 f-20 padding-8">Point 5: Enter your phone : </div>
+                <div class="col-4">
+                    <input class="padding-12" ng-model="userPhone" type="text" maxlength="14" phone-format placeholder="Your number"/>
+                </div>
+            </div>
+            <div class="row padding-top-20">
+                <div class="col-3 f-20 padding-8">Point 6: Enter price : </div>
+                <div class="col-4">
+                    <input class="padding-12" ng-model="userPrice" type="text" price-format placeholder="Your price"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

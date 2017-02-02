@@ -1,0 +1,51 @@
+<div ng-controller="HomeCtrl3">
+
+    <section class="bg-grey-lighter home__title">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer" ui-sref="home({pageParam : 1})">
+                    Page 1
+                </div>
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer" ui-sref="home({pageParam : 2})">
+                    Page 2
+                </div>
+                <div class="col-4 text-center padding-top-20 padding-bottom-20 cursor-pointer active" ui-sref="home({pageParam : 3})">
+                    Page 3
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="home__filter margin-top-50 container">
+        <div class="row">
+            <div class="col-3"><input ng-model="searchTerm" class="padding-12" placeholder="Search Text"/></div>
+            <div class="col-4 fg-grey-dark padding-12">Click on make/model to sort table</div>
+        </div>
+    </div>
+    <section class="home__table margin-top-20">
+        <div class="container">
+            <div class="row" style="border-bottom: 1px solid;">
+                <div class="col-4 text-center padding-top-4 padding-bottom-4 bg-grey-lighter cursor-pointer" ng-click="sortType='make';">
+                    Make
+                </div>
+                <div class="col-4 text-center padding-top-4 padding-bottom-4 bg-grey-lighter cursor-pointer" ng-click="sortType='model';">
+                    Model
+                </div>
+                <div class="col-4 text-center padding-top-4 padding-bottom-4 bg-grey-lighter">
+                    Version
+                </div>
+            </div>
+            <div class="row home__table" ng-repeat="car in data | filter:searchTerm | orderBy :sortType:false">
+                <div class="col-4 text-center padding-top-4 padding-bottom-4">
+                    {{car.make}}
+                </div>
+                <div class="col-4 text-center padding-top-4 padding-bottom-4">
+                    {{car.model}}
+                </div>
+                <div class="col-4 text-center padding-top-4 padding-bottom-4">
+                    {{car.version}}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

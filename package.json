@@ -1,0 +1,17 @@
+{
+  "name": "wallethub",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-angular-templates": "~0.5",
+    "grunt-browser-output": "0.1.0",
+    "grunt-contrib-clean": "~0.5",
+    "grunt-contrib-connect": "~0.10.1",
+    "grunt-contrib-jshint": "~0.9",
+    "grunt-contrib-watch": "~0.6",
+    "grunt-preprocess": "^5.0.1",
+    "grunt-sass": "~1.0.0",
+    "load-grunt-tasks": "~0.2",
+    "connect-modrewrite": "^0.7.11"
+  }
+}
